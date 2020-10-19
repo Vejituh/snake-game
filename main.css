@@ -62,7 +62,7 @@
     background:rgb(68, 63, 88);
     border-radius:25% 25% 50% 50%/40% 40% 40% 40%;
   }
-  .screen span{
+  .logo{
     position:absolute;
     top:10%;
     left:35%;
@@ -72,16 +72,34 @@
   .snakeDisplayContainer{
     position:absolute;
     display: flex;
+    flex-direction: column;
     top:22%;
     border-radius:5px 5px 10px 10px/20px;
     left:10%;
     height: 260px;
     width: 290px;
-    padding: 20px;
+    padding: 2px 15px 15px 15px;
     background-color: #D3CFA6;
   }
+  .scoreDisplay {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    color: #333928;
+    font-size: 12px;
+    width: 260px;
+    margin: 0 auto 5px auto;
+  }
+
+  .apple {
+    color: transparent;  
+    text-shadow: 0 0 0 #333928;
+    vertical-align: bottom; 
+    height: 23px;
+    display:inline-block;
+  }
   .snakeDisplay {
-      border: 1px solid black;
+      border: 2px solid black;
       margin: auto;
       height: 220px;
       width: 260px;

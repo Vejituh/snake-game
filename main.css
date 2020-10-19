@@ -111,9 +111,11 @@
     width: 20px;
     height: 20px;
     text-align: center;
-    background-color: red;
     font-size: 10px;
     line-height: 20px;
+  }
+  .snake {
+    background-color:#333928;
   }
   .middle-btn{
     position:absolute;

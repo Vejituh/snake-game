@@ -87,7 +87,6 @@ function resetGame() {
         applesEatDisplay.textContent = "0";
         squares[randomApple].textContent = '';
         squares[randomApple].classList.remove('apple');
-        console.log(speed);
     }
 
 function generateApple() {

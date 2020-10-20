@@ -47,15 +47,20 @@ function move() {
             {
             clearInterval(timerId);
         } else if(squares[snake[0]].classList.contains('apple')){
+            applesEat++
+            applesEatDisplay.textContent = applesEat
+            score === 0? score += speed : score = score + (speed + applesEat);
+            scoreDisplay.textContent = score;
             squares[snake[0]].classList.remove('apple')
             squares[snake[0]].classList.add('snake')
             squares[snake[0]+direction].classList.add('snake')
             snake.unshift((snake[0]+direction));
             squares[randomApple].textContent = '';
             clearInterval(timerId);
-            speed = speed - 50;
+            if (speed > 200) {
+                speed = speed - 50;
+            }
             timerId = setInterval(move,speed);
-            console.log(speed);
             generateApple();
         }else {
                 tail = snake.pop();
@@ -66,20 +71,24 @@ function move() {
 }
 
 function resetGame() {
+        clearInterval(timerId);
         snake.forEach(element => {
         squares[element].classList.remove('snake');
         });
         snake = [];
         squares[randomApple].classList.remove('apple');
         score = 0;
+        speed = 1000;
         applesEat = 0;
+        timerId = 0;
         tail = 0;
+        direction = 1;
         scoreDisplay.textContent = "0";
         applesEatDisplay.textContent = "0";
         squares[randomApple].textContent = '';
         squares[randomApple].classList.remove('apple');
-        clearInterval(timerId);
-}
+        console.log(speed);
+    }
 
 function generateApple() {
     randomApple = Math.floor(Math.random() * 100);

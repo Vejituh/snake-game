@@ -7,7 +7,10 @@ let squares = [];
 let snake = [];
 let direction = 1;
 let timerId = 0;
+let speed = 1000
 let tail = 0;
+let randomApple = 0
+let gameRunning = false;
 
 function displayGrid() {
     for (let numOfSquares = 0; numOfSquares < 100; numOfSquares++) {
@@ -17,7 +20,8 @@ function displayGrid() {
         squares.push(square)
     }
     displaySnake();
-    timerId = setInterval(move,1000);
+    generateApple();
+    timerId = setInterval(move,speed);
 }
 
 function displaySnake() {
@@ -42,7 +46,18 @@ function move() {
         )
             {
             clearInterval(timerId);
-        } else {
+        } else if(squares[snake[0]].classList.contains('apple')){
+            squares[snake[0]].classList.remove('apple')
+            squares[snake[0]].classList.add('snake')
+            squares[snake[0]+direction].classList.add('snake')
+            snake.unshift((snake[0]+direction));
+            squares[randomApple].textContent = '';
+            clearInterval(timerId);
+            speed = speed - 50;
+            timerId = setInterval(move,speed);
+            console.log(speed);
+            generateApple();
+        }else {
                 tail = snake.pop();
                 squares[tail].classList.remove('snake');
                 snake.unshift((snake[0] + direction));
@@ -55,18 +70,37 @@ function resetGame() {
         squares[element].classList.remove('snake');
         });
         snake = [];
+        squares[randomApple].classList.remove('apple');
         score = 0;
         applesEat = 0;
         tail = 0;
         scoreDisplay.textContent = "0";
         applesEatDisplay.textContent = "0";
+        squares[randomApple].textContent = '';
+        squares[randomApple].classList.remove('apple');
         clearInterval(timerId);
+}
+
+function generateApple() {
+    randomApple = Math.floor(Math.random() * 100);
+    do {
+        if(squares[randomApple].classList.contains('snake')){
+            randomApple = Math.floor(Math.random() * 100);
+        }
+        squares[randomApple].textContent = '🍎';
+        squares[randomApple].classList.add('apple');
+    } while (squares[randomApple].classList.contains(!'apple'))
 }
 
 document.addEventListener('keyup',function(e) {
     if(e.code === 'Enter') {
+        if (gameRunning){
             resetGame();
             displayGrid();
+        }else {
+            displayGrid();
+            gameRunning = true;
+        }
     }else if (e.code === 'ArrowUp') {
         direction = -10;
     } else if(e.code === 'ArrowDown') {

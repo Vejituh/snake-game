@@ -47,19 +47,16 @@ function move() {
             {
             clearInterval(timerId);
         } else if(squares[snake[0]].classList.contains('apple')){
+            clearInterval(timerId)
             applesEat++
             applesEatDisplay.textContent = applesEat
             score === 0? score += speed : score = score + (speed + applesEat);
             scoreDisplay.textContent = score;
             squares[snake[0]].classList.remove('apple')
-            squares[snake[0]].classList.add('snake')
             squares[snake[0]+direction].classList.add('snake')
-            snake.unshift((snake[0]+direction));
+            snake.unshift(snake[0]+direction);
             squares[randomApple].textContent = '';
-            clearInterval(timerId);
-            if (speed > 200) {
-                speed = speed - 50;
-            }
+            speed > 200? speed = speed - 50 : speed;
             timerId = setInterval(move,speed);
             generateApple();
         }else {

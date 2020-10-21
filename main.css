@@ -7,15 +7,15 @@
 }
 
 body {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   background-color: #D3CFA6;
   font-family: 'Oswald', sans-serif;
   letter-spacing: 2px;
-  padding: 5px;
+  padding: 2px;
   color: #333928;
 }
 
@@ -24,10 +24,11 @@ header {
   max-width: 65ch;
 }
 
-h1 {
+header h1 {
   font-size: 1.4em;
 }
-h2 {
+
+header h2{
   font-size: 1.2em;
 }
 
@@ -38,41 +39,41 @@ a {
 
 .container {
   position: relative;
-  width: 225px;
-  height: 450px;
-  margin: 50px 0;
+  width: 300px;
+  height: 600px;
+  margin: 30px 0;
   background: rgba(68, 63, 88);
-  border-radius: 50px 50px 50px 50px/300px 300px 300px 300px;
+  border-radius: 100px 100px 100px 100px/600px 600px 600px 600px;
 }
 
 .container:before {
   position: absolute;
-  top: -17.5px;
-  left: 26px;
-  width: 173px;
-  height: 150px;
+  top: -23.33px;
+  left: 34.66px;
+  width: 231.33px;
+  height: 200px;
   z-index: -1;
   background: rgb(68, 63, 88);
   content: "";
-  border-radius: 87.5px/32.5px;
+  border-radius: 175px/65px;
 }
 
 .container:after {
   position: absolute;
-  bottom: -14px;
-  left: 27.5px;
-  width: 170px;
-  height: 150px;
+  bottom: -18.66px;
+  left: 36.66px;
+  width: 226.66px;
+  height: 200px;
   background: rgb(68, 63, 88);
   content: "";
-  border-radius: 87.5px/25px;
+  border-radius: 175px/50px;
 }
 
 .screen {
-  width: 180px;
-  height: 285px;
-  left: 22.5px;
-  top: -4.5px;
+  width: 240px;
+  height: 380px;
+  left: 30px;
+  top: -6px;
   background: #B2AEAA;
   position: absolute;
   border-radius: 25% 25% 50% 50%/40% 40% 40% 40%;
@@ -81,11 +82,11 @@ a {
 
 .screen:before {
   position: absolute;
-  width: 165px;
-  height: 240px;
+  width: 220px;
+  height: 320px;
   content: "";
-  top: 7.5px;
-  left: 7.5px;
+  top: 10px;
+  left: 10px;
   background: rgb(68, 63, 88);
   border-radius: 25% 25% 50% 50%/40% 40% 40% 40%;
 }
@@ -93,8 +94,8 @@ a {
 .logo {
   position: absolute;
   top: 10%;
-  left: 35%;
-  font-size: 30px;
+  left: 40%;
+  font-size: 20px;
   color: #B2AEAA;
 }
 
@@ -105,9 +106,9 @@ a {
   top: 22%;
   border-radius: 5px 5px 10px 10px/20px;
   left: 10%;
-  height: 130px;
-  width: 145px;
-  padding: 1px 7.5px 7.5px 7.5px;
+  height: 173.33px;
+  width: 193.33px;
+  padding: 1.33px 10px 10px 10px;
   background-color: #D3CFA6;
 }
 
@@ -115,18 +116,19 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  border-bottom: 2px solid black;
+  border-bottom: 1.33px solid black;
   color: #333928;
-  font-size: 5.5px;
-  width: 102px;
-  margin: 1px auto auto auto;
+  font-size: 11px;
+  width: 136px;
+  margin: 1px auto 4px auto;
+  padding: 1px 0 7px 0;
 }
 
 .scoreDisplay h2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 12.5px;
+  height: 16.66px;
 }
 
 .apple {
@@ -136,25 +138,25 @@ a {
 }
 
 #applesEat, #score {
-  margin-top: 1px;
+  margin-top: 1.33px;
 }
 
 #snakeDisplay {
-  border: 1px solid black;
+  border: 1.33px solid black;
   margin: auto;
-  height: 102px;
-  width: 102px;
+  height: 136px;
+  width: 136px;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
 }
 
 .square {
-  width: 10px;
-  height: 10px;
+  width: 13.33px;
+  height: 13.33px;
   text-align: center;
-  font-size: 5px;
-  line-height: 10px;
+  font-size: 6.66px;
+  line-height: 13.33px;
 }
 
 .snake {
@@ -163,28 +165,28 @@ a {
 
 .middle-btn {
   position: absolute;
-  width: 52.5px;
-  height: 15px;
-  bottom: 37px;
+  width: 70px;
+  height: 20px;
+  bottom: 49.33px;
   background: #B2AEAA;
-  left: 64.5px;
+  left: 86px;
   border-radius: 50%;
 }
 
 .middle-btn:before {
   position: absolute;
-  width: 55px;
-  height: 22.5px;
+  width: 73.33px;
+  height: 30px;
   content: "";
   border-radius: 50%;
 }
 
 .middle-btn:after {
   position: absolute;
-  width: 30px;
-  left: 12px;
-  top: -3px;
-  height: 7.5px;
+  width: 40px;
+  left: 16px;
+  top: -4px;
+  height: 10px;
   content: "";
   border-radius: 6px 6px 6px 6px;
   border-bottom: 6px solid #11899a;
@@ -192,23 +194,23 @@ a {
 
 .call-btn {
   position: absolute;
-  width: 37.5px;
-  height: 30px;
+  width: 75px;
+  height: 26.66px;
   border: 1px solid #000;
-  bottom: 18px;
-  left: 15px;
+  bottom: 24px;
+  left: 20px;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
   border-radius: 5px;
   transform: rotate(30deg) skew(-15deg);
 }
 
 .chevrons {
   position: absolute;
-  width: 60px;
-  height: 30px;
+  width: 80px;
+  height: 40px;
   border: 1px solid #000;
-  bottom: 22.5px;
+  bottom: 30px;
   right: 0px;
   border-radius: 5px 10px 10px 10px;
   transform: rotate(-45deg) skew(15deg);
@@ -216,20 +218,20 @@ a {
 
 .chevrons:after {
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   content: "<";
-  font-size: 30px;
-  left: 7.5px;
+  font-size: 20px;
+  left: 10px;
 }
 
 .chevrons:before {
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   content: ">";
-  font-size: 30px;
-  right: 7.5px;
+  font-size: 20px;
+  right: 10px;
 }
 
 .buttons {
@@ -238,8 +240,8 @@ a {
   position: relative;
   top: 55%;
   left: 0%;
-  width: 225px;
-  height: 180px;
+  width: 300px;
+  height: 230px;
   z-index: 1;
 }
 
@@ -253,16 +255,16 @@ a {
 }
 
 .btns {
-  margin: 0 30px;
-  font-size: 22.5px;
+  margin: 0 40px;
+  font-size: 30px;
   position: absolute;
   background: #B2AEAA;
 }
 
 .btn-1, .btn-7, .btn-4, .btn-10 {
-  width: 45px;
-  height: 30px;
-  top: 15px;
+  width: 60px;
+  height: 40px;
+  top: 20px;
   border: 1px solid #000;
   border-radius: 50%;
   text-align: center;
@@ -270,20 +272,20 @@ a {
 }
 
 .btn-2, .btn-5, .btn-8, .btn-0 {
-  width: 45px;
-  height: 30px;
-  top: 30px;
-  left: 64.5px;
+  width: 60px;
+  height: 40px;
+  top: 40px;
+  left: 86px;
   border: 1px solid #000;
   border-radius: 50%;
   text-align: center;
 }
 
 .btn-3, .btn-6, .btn-9, .btn-12 {
-  width: 45px;
-  height: 30px;
-  top: 15px;
-  left: 124.5px;
+  width: 60px;
+  height: 40px;
+  top: 20px;
+  left: 166px;
   border: 1px solid #000;
   border-radius: 50%;
   text-align: center;
@@ -291,30 +293,30 @@ a {
 }
 
 .btn-7 {
-  top: 7.5px;
+  top: 10px;
 }
 
 .btn-8 {
-  top: 18px;
+  top: 24px;
 }
 
 .btn-9 {
-  top: 7.5px;
+  top: 10px;
 }
 
 .btn-10 {
   top: 0px;
-  left: 7.5px;
+  left: 10px;
 }
 
 .btn-0 {
-  top: 4.5px;
-  left: 66px;
+  top: 6px;
+  left: 88px;
 }
 
 .btn-12 {
-  top: -3px;
-  left: 120px;
+  top: -4px;
+  left: 160px;
 }
 
 .button-row2 {

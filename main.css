@@ -8,14 +8,29 @@
   body{
     min-height:100vh;
     display:flex;
+    flex-direction: column;
     align-items:center;
     justify-content:center;
     background-color: #D3CFA6;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    padding: 10px;
+    color: #333928;
+  }
+  header {
+
+    text-align: center;
+    max-width: 65ch;
+  }
+  a{
+    text-decoration: none;
+    color: #333928;
   }
   .container{
     position:relative;
     width:450px;
     height:900px;
+    margin: 100px 0;
     background:rgba(68, 63, 88);
     border-radius: 100px 100px 100px 100px/600px 600px 600px 600px;
   }
@@ -84,20 +99,29 @@
   .scoreDisplay {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
     border-bottom: 2px solid black;
     color: #333928;
-    font-size: 12px;
+    font-size: 11px;
     width: 204px;
-    margin: 2px auto 5px auto;
+    margin: 2px auto auto auto;
   }
-
+  .scoreDisplay h2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 25px;
+  }
   .apple {
     color: transparent;  
     text-shadow: 0 0 0 #333928;
-    vertical-align: bottom; 
-    height: 23px;
-    display:inline-block;
+    display: inline-block;
   }
+
+  #applesEat, #score {
+    margin-top: 2px;
+  }
+
   #snakeDisplay {
       border: 2px solid black;
       margin: auto;

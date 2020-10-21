@@ -4,15 +4,21 @@
         <title>Snake Game</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     </head>
     <body>
+        <header>
+          <h1>Welcome to my 🐍 game</h1>
+          <h2>To start the game press Enter/Return</h2>
+          <h2>Use the arrows on your keyboard to move</h2>
+        </header>
         <div class="container">
             <div class="screen"><span class="logo">NOKIA</span>
               <div class="snakeDisplayContainer">
                 <div class="scoreDisplay">
                   <h2><span id="score">0</span></h2>
                   <div>
-                    <h2> <span class="apple">🍎</span> <span id="applesEat">0</span> </h2>
+                    <h2> <div><span class="apple">🍎</span></div> <span id="applesEat">0</span> </h2>
                   </div>
                 </div>
                   <div id="snakeDisplay">
@@ -43,6 +49,9 @@
                 <div class="btns btn-12">#</div></div>
             </div>
           </div>
+          <footer>
+            <h2><a href="https://github.com/rafaelg1402/snake-game">Github</a></h2>
+          </footer>
         <script src="index.js"></script>
     </body>
 </html>
